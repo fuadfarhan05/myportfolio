@@ -1,0 +1,192 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+    background: #0a0a2a;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(to bottom, #0a0a2a, #1a1a4a);
+    overflow: hidden;
+}
+
+/* Shooting stars effect */
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(white, rgba(255,255,255,0));
+    opacity: 0.8;
+    transform: rotate(45deg);
+    animation: shoot 2s linear infinite;
+}
+
+@keyframes shoot {
+    0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
+    100% { transform: translateX(-100vw) translateY(100vh) rotate(45deg); opacity: 0; }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header .contact-links a {
+    color: #00aaff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+header .contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Timeline / Sections */
+.timeline-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.timeline-section h2 {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #00aaff;
+}
+
+.timeline li {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -4px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background: #00aaff;
+    border-radius: 50%;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Floating PNGs */
+#floating-images img {
+    position: absolute;
+    width: 100px;
+    opacity: 0.5;
+    pointer-events: none;
+    transition: transform 1s ease;
+}
+
+a {
+    color:#00aaff;
+}
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* smaller header */
+    }
+
+    header .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .timeline-section {
+        margin: 2rem 1rem; /* reduce margins */
+        padding: 0 0.5rem;
+    }
+
+    .timeline li {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
+        left: -3px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    #floating-images img {
+        width: 60px; /* smaller floating images on mobile */
+        opacity: 0.3;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .contact-links {
+        font-size: 0.9rem;
+    }
+
+    .timeline-section h2 {
+        font-size: 1.2rem;
+    }
+}
