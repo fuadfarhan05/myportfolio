@@ -165,8 +165,6 @@ header .contact-links a:hover {
     height: 48px;
     object-fit: contain;
     flex-shrink: 0;
-    opacity: 0.9;
-    filter: grayscale(100%);
 }
 
 .timeline-content h3 {
@@ -193,17 +191,17 @@ header .contact-links a:hover {
 #floating-images img {
     position: absolute;
     width: 90px;
-    opacity: 0.12;
     pointer-events: none;
     transition: transform 1.5s ease;
 }
+
 
 /* =========================
    LINKS
 ========================= */
 a {
+
     color: #ffffff;
-    opacity: 1;
 }
 
 a:hover {
@@ -234,7 +232,6 @@ a:hover {
 
     #floating-images img {
         width: 60px;
-        opacity: 0.08;
     }
 }
 
