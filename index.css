@@ -1,192 +1,249 @@
-/* Basic Reset */
+/* =========================
+   RESET + BASE
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Background */
 body {
-    background: #0a0a2a;
-    color: #fff;
+    background: #050505;
+    color: #ffffff;
     overflow-x: hidden;
-    position: relative;
     min-height: 100vh;
 }
 
+/* =========================
+   BACKGROUND
+========================= */
 #background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     z-index: -2;
-    background: linear-gradient(to bottom, #0a0a2a, #1a1a4a);
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 60%),
+        radial-gradient(circle at bottom, rgba(255,255,255,0.03), transparent 70%),
+        #050505;
     overflow: hidden;
 }
 
-/* Shooting stars effect */
+/* Shooting stars */
 .shooting-star {
     position: absolute;
-    width: 2px;
-    height: 100px;
+    width: 1px;
+    height: 120px;
     background: linear-gradient(white, rgba(255,255,255,0));
-    opacity: 0.8;
+    opacity: 0.6;
     transform: rotate(45deg);
-    animation: shoot 2s linear infinite;
+    animation: shoot 3.5s linear infinite;
 }
 
 @keyframes shoot {
-    0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
-    100% { transform: translateX(-100vw) translateY(100vh) rotate(45deg); opacity: 0; }
+    from {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-120vw, 120vh) rotate(45deg);
+        opacity: 0;
+    }
 }
 
-/* Header */
+/* =========================
+   HEADER / HERO
+========================= */
 header {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem 3rem;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+}
+
+header p {
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
 }
 
 header .contact-links a {
-    color: #00aaff;
-    margin: 0 0.5rem;
+    color: #ffffff;
+    margin: 0 0.6rem;
     text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
 }
 
 header .contact-links a:hover {
-    text-decoration: underline;
+    opacity: 1;
 }
 
-/* Timeline / Sections */
+/* =========================
+   SECTIONS
+========================= */
 .timeline-section {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 0 1rem;
+    max-width: 820px;
+    margin: 4rem auto;
+    padding: 0 1.25rem;
 }
 
 .timeline-section h2 {
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid #00aaff;
-    display: inline-block;
-    padding-bottom: 0.3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
-/* Timeline */
+.timeline-section h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin-top: 0.5rem;
+    background: linear-gradient(to right, #ffffff, transparent);
+    opacity: 0.8;
+}
+
+/* =========================
+   TIMELINE
+========================= */
 .timeline {
     list-style: none;
     position: relative;
-    padding-left: 2rem;
+    padding-left: 2.5rem;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 14px;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: #00aaff;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
 }
 
 .timeline li {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     padding-left: 2rem;
 }
 
 .timeline-dot {
     position: absolute;
-    left: -4px;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    background: #00aaff;
+    left: 8px;
+    top: 0.45rem;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
     border-radius: 50%;
 }
 
+/* =========================
+   TIMELINE ITEM WITH LOGO
+========================= */
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.timeline-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 0.9;
+    filter: grayscale(100%);
+}
+
 .timeline-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content .company {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.5rem;
 }
 
 .timeline-content p {
     font-size: 0.95rem;
-    margin-bottom: 0.2rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
 }
 
-/* Floating PNGs */
+/* =========================
+   FLOATING IMAGES
+========================= */
 #floating-images img {
     position: absolute;
-    width: 100px;
-    opacity: 0.5;
+    width: 90px;
+    opacity: 0.12;
     pointer-events: none;
-    transition: transform 1s ease;
+    transition: transform 1.5s ease;
 }
 
+/* =========================
+   LINKS
+========================= */
 a {
-    color:#00aaff;
+    color: #ffffff;
+    opacity: 1;
 }
 
+a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
 
-/* Responsive adjustments for mobile */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem; /* smaller header */
-    }
-
-    header .contact-links {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
+    header {
+        padding: 3rem 1rem 2rem;
     }
 
     .timeline-section {
-        margin: 2rem 1rem; /* reduce margins */
-        padding: 0 0.5rem;
+        margin: 3rem 1rem;
     }
 
-    .timeline li {
-        padding-left: 1.5rem;
+    .timeline-item {
+        gap: 0.75rem;
     }
 
-    .timeline-dot {
-        width: 10px;
-        height: 10px;
-        left: -3px;
-    }
-
-    .timeline-content h3 {
-        font-size: 1rem;
-    }
-
-    .timeline-content p {
-        font-size: 0.9rem;
+    .timeline-logo {
+        width: 36px;
+        height: 36px;
     }
 
     #floating-images img {
-        width: 60px; /* smaller floating images on mobile */
-        opacity: 0.3;
+        width: 60px;
+        opacity: 0.08;
     }
 }
 
-/* Extra small screens (phones) */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5rem;
-    }
-
-    header .contact-links {
-        font-size: 0.9rem;
+        font-size: 1.8rem;
     }
 
     .timeline-section h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 }
