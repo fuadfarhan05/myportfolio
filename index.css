@@ -165,6 +165,7 @@ header .contact-links a:hover {
     height: 48px;
     object-fit: contain;
     flex-shrink: 0;
+    border-radius: 8px;
 }
 
 .timeline-content h3 {
