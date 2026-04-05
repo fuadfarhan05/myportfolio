@@ -3,187 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Fuad Farhan — Portfolio</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="background"></div>
 
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme">☀</button>
+
     <header>
         <h1>Fuad Farhan</h1>
-        <div class="contact-links">
-            <p>Email: fuadhoquefarhan05@gmail.com </p>
+        <p class="hero-subtitle">Software Engineer</p>
+        <div class="header-links">
+            <span>fuadhoquefarhan05@gmail.com</span>
+            <a href="https://www.linkedin.com/in/fuad-farhan-b25295301" target="_blank">LinkedIn</a>
+            <a href="projects.html" class="link-button">Projects Grid</a>
         </div>
-        <a href="https://www.linkedin.com/in/fuad-farhan-b25295301" target="_blank">LinkedIn</a>
-        <a href="projects.html" class="link-button"> See Projects Section In Grid View </a>
-
     </header>
 
     <main>
+
+        <!-- Projects Section -->
         <section class="timeline-section">
             <h2>Projects</h2>
             <ul class="timeline">
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>FlowState</h3>
-                        <p>Interview Preparation tool that uses your uploaded resume to create AI talking points and scripts to feel more prepared and sound confident during your interviews.</p>
-                        <a href="https://github.com/fuadfarhan05/flowstate">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>FlowState</h3>
+                            <p>Interview preparation tool that uses your uploaded resume to create AI talking points and scripts — so you feel more prepared and sound confident during interviews.</p>
+                            <a href="https://github.com/fuadfarhan05/flowstate" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>College Events Portal</h3>
-                        <p>Led a team of software engineer to create the first ever college club events portal ever made for Hunter College.</p>
-                        <a href="https://github.com/fuadfarhan05/huntereventsportal">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>College Events Portal</h3>
+                            <p>Led a team of software engineers to create the first-ever college club events portal for Hunter College.</p>
+                            <a href="https://github.com/fuadfarhan05/huntereventsportal" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Ramadan Wordle</h3>
-                        <p>Developed a Wordle game that generates new rounds with Ramadan themed words on a daily basis for the 30 days of Ramadan.</p>
-                        <a href="https://my-ramadan-wordle.vercel.app/">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>Ramadan Wordle</h3>
+                            <p>A Wordle game that generates new rounds with Ramadan-themed words on a daily basis for all 30 days of Ramadan.</p>
+                            <a href="https://my-ramadan-wordle.vercel.app/" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Iqra</h3>
-                        <p>Created an Islamic Themed Google Chrome Extension to set a new Quran backdrop after every new chrome tab that you open. (This extension is published and can be downloaded on Google's Chrome Web Store in the link below)</p>
-                        <a href="https://chromewebstore.google.com/detail/iqra-quran-chrome-extensi/mifibcijklellhdpeameggpbefkbgghm">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>Iqra</h3>
+                            <p>Islamic-themed Chrome extension that sets a new Quran backdrop on every new tab. Published and available on the Chrome Web Store.</p>
+                            <a href="https://chromewebstore.google.com/detail/iqra-quran-chrome-extensi/mifibcijklellhdpeameggpbefkbgghm" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>WordSpeed</h3>
-                        <p>Building AI tools for businessses and Social Media Influencers to build ebooks. My platform allows businesses make ebooks in less time and spending less money.</p>
-                        <a href="https://www.loom.com/share/a58ad398cbe04e078f683c4f975cae1d">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>WordSpeed</h3>
+                            <p>AI platform for businesses and social media influencers to build ebooks faster and at a fraction of the cost.</p>
+                            <a href="https://www.loom.com/share/a58ad398cbe04e078f683c4f975cae1d" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Lense</h3>
-                        <p>Developed a full stack Web/Mobile application for college students to reduce the mental barriers of studying by developing a social aspect to studying which includes implementing virtual study rooms to study with friends online along with a community page allowing students to share their flashcards and study resources with other students and create their own study resources.</p>
-                        <a href="https://trylense.vercel.app/">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>Lense</h3>
+                            <p>Full-stack web/mobile app for college students with virtual study rooms and a community page for sharing flashcards and study resources.</p>
+                            <a href="https://trylense.vercel.app/" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Habit Aware</h3>
-                        <p>Developed a full-stack web app leveraging two machine learning libraries MediaPipe and OpenCV to raise awareness of desktop-related habits such as nail biting through real-time behavior detection. This innovative project garnered recognition from leading technology companies including Bloomberg, Meta, and Book of the Month, highlighting its technical excellence.</p>
-                        <a href="https://github.com/fuadfarhan05/HabitAware">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>Habit Aware</h3>
+                            <p>Full-stack web app using MediaPipe and OpenCV for real-time detection of desktop habits like nail biting. Recognized by Bloomberg, Meta, and Book of the Month.</p>
+                            <a href="https://github.com/fuadfarhan05/HabitAware" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Fast Food Ball Game</h3>
-                        <p>Developed  a 3D physics-based game using Unity and C#, incorporating object collisions, real-time input handling, object physics, and custom game mechanics. Optimized performance for WebGL front end and deployed the build for cross-platform browser compatibility.
-</p>
-                        <a href="https://github.com/fuadfarhan05/HabitAware">check it out!</a>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>Fast Food Ball Game</h3>
+                            <p>3D physics-based game built in Unity and C#, with object collisions, real-time input handling, and a WebGL build for cross-platform browser play.</p>
+                            <a href="https://github.com/fuadfarhan05/HabitAware" target="_blank" class="cta-link">check it out</a>
+                        </div>
                     </div>
                 </li>
+
             </ul>
         </section>
 
-        
         <!-- Work Experience Section -->
         <section class="timeline-section">
             <h2>Work Experience</h2>
             <ul class="timeline">
-                <li>
+
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <img src="mongodb.png" alt="MongoDB" class="timeline-logo" />
-                    <div class="timeline-content">
-                        <h3>Associate MongoDB Node.js Developer</h3>
-                        <p>Present</p>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-logos">
+                                <img src="mongodb.png" alt="MongoDB" class="timeline-logo" />
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Associate MongoDB Node.js Developer</h3>
+                                <p class="date">Present</p>
+                            </div>
+                        </div>
                         <ul>
-                            <li>
-                                Built Node.js CRUD endpoints with the MongoDB driver to streamline backend data workflows, improving full-stack responsiveness by reducing query latency through optimized indexing and clean API design.                            </li>
-                            <li>
-                                Designed and managed MongoDB data models using schema-best practices (embedding vs referencing, document structure, and BSON types) to increase application scalability and ensure consistent performance across high-read/write workloads.
-
-                            </li>
-                            <li>
-                                Integrated MongoDB Atlas features such as aggregation pipelines, connection pooling, and secure environment configs to deliver more reliable full-stack app functionality.
-
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-dot"></div>
-                    <img src="kodely.png" alt="Kodely" class="timeline-logo" />
-                    <div class="timeline-content">
-                        <h3>Software Engineer Instructor @ Kodely</h3>
-                        <p>Jan 2025 - Present</p>
-                        <ul>
-                            <li>
-                                Spearheaded the design and delivery of comprehensive STEM lessons and hands-on assignments for Kodely, a STEM learning program aimed at K–12 students. Developed interactive lessons for programming and robotics.
-                            </li>
-                            <li>
-                                Improved students' practical experience and confidence in Python and JavaScript. Designed project-based learning activities that introduced core programming concepts such as variables, loops, conditionals, and functions.
-
-                            </li>
-                            <li>
-                                Revamped educational content and curriculum structure to improve clarity, engagement, and technical depth, resulting in a measurable increase in student enrollment and a noticeable improvement in proficiency across software engineering skills. 
-
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <!-- Add more work experiences here -->
-                <li>
-                    <div class="timeline-dot"></div>
-                    <img src="google.png" alt="Google" class="timeline-logo" />
-                    <img src="infosys.png" alt="Infosys" class="timeline-logo" />
-                    <div class="timeline-content">
-                        <h3>Lead Software Engineer @ Infosys + Google</h3>
-                        <p>Jan 2023 - June 2023</p>
-                        <ul>
-                            <li>
-                            As Lead App Developer, I took the position in leading my team in creating the project plans, app idea, collecting survey data applicable for our application, developing a wireframe of the app, developing the MVP, and having a final product.                            </li>
-                            <li>
-                            Led a team of 4 to build a wireframe of an app -using figma software- to resolve the issues of Mental Health and General Health using many virtual productive practices by developing a journaling/meditation system for users.
-                            </li>
-                            <li>
-                            Led in developing the final product on SwiftUI/Xcode as a fully functional application resulting in winning honorable mention in the engineering expo. 
-                            </li>
+                            <li>Built Node.js CRUD endpoints with the MongoDB driver to streamline backend data workflows, improving full-stack responsiveness through optimized indexing and clean API design.</li>
+                            <li>Designed and managed MongoDB data models using schema best practices (embedding vs referencing, document structure, BSON types) for scalability and consistent performance across high-read/write workloads.</li>
+                            <li>Integrated MongoDB Atlas features such as aggregation pipelines, connection pooling, and secure environment configs to deliver more reliable full-stack functionality.</li>
                         </ul>
                     </div>
                 </li>
 
-                <li>
+                <li class="fade-in">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer TA</h3>
-                        <p>Jan 2023 - June 2025</p>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-logos">
+                                <img src="kodely.png" alt="Kodely" class="timeline-logo" />
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Software Engineer Instructor — Kodely</h3>
+                                <p class="date">Jan 2025 – Present</p>
+                            </div>
+                        </div>
                         <ul>
-                            <li>
-                                Led classroom instruction in JavaScript, the Document Object Model (DOM), and core web development principles for cohorts of up to 25 students. Designed and delivered structured, project-based learning experiences that emphasized hands-on application of coding concepts such as event handling, DOM manipulation, and responsive design.
-                            <li>
-                                Strengthened students' project development skills for engineering competitions by providing targeted mentorship, hands-on guidance, and strategic feedback throughout the project lifecycle. Supported students in ideation, design, prototyping, and presentation phases, helping them refine technical solutions and effectively communicate their innovations.
-                            </li>
-                            <li>
-                                Facilitated personalized one-on-one mentorship through tutoring sessions and thorough code reviews, helping students develop critical debugging skills, accurately interpret error messages, and master foundational coding principles.
-                            </li>
+                            <li>Designed and delivered comprehensive STEM lessons and hands-on assignments for K–12 students, covering programming and robotics.</li>
+                            <li>Improved students' practical skills in Python and JavaScript through project-based learning covering variables, loops, conditionals, and functions.</li>
+                            <li>Revamped curriculum structure to improve clarity and engagement, resulting in increased enrollment and measurable improvements in student proficiency.</li>
                         </ul>
                     </div>
                 </li>
+
+                <li class="fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="card-logos">
+                                <img src="google.png" alt="Google" class="timeline-logo" />
+                                <img src="infosys.png" alt="Infosys" class="timeline-logo" />
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Lead Software Engineer — Infosys × Google</h3>
+                                <p class="date">Jan 2023 – Jun 2023</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Led project planning, app ideation, survey data collection, wireframing, and MVP development as Lead App Developer.</li>
+                            <li>Directed a team of 4 to design a Figma wireframe for a mental health and wellness app featuring journaling and meditation.</li>
+                            <li>Delivered the final product in SwiftUI/Xcode as a fully functional iOS app, winning honorable mention at the engineering expo.</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-content">
+                            <h3>Software Engineer TA</h3>
+                            <p class="date">Jan 2023 – Jun 2025</p>
+                            <ul>
+                                <li>Led classroom instruction in JavaScript, the DOM, and core web development for cohorts of up to 25 students through project-based learning.</li>
+                                <li>Strengthened students' project skills for engineering competitions through mentorship across ideation, design, prototyping, and presentation phases.</li>
+                                <li>Provided one-on-one tutoring and code reviews to help students develop debugging skills and master foundational coding principles.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
             </ul>
         </section>
 
-        
     </main>
 
-    <!-- Floating PNG Images -->
-    <div id="floating-images">
-    </div>
+    <div id="floating-images"></div>
 
     <script src="script.js"></script>
 </body>
